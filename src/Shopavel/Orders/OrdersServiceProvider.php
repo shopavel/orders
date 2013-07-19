@@ -31,6 +31,11 @@ class OrdersServiceProvider extends ServiceProvider {
     {
         $this->app['orders'] = $this->app->share(function($app)
         {
+            return new OrderManager;
+        });
+
+        $this->app['orders.processor'] = $this->app->share(function($app)
+        {
             return new OrderProcessor;
         });
     }
@@ -42,7 +47,7 @@ class OrdersServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return array('orders');
+        return array('orders', 'orders.processor');
     }
 
 }
