@@ -7,12 +7,19 @@
             "email": "lsjroberts@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/shopavel/products"
+        }
+    ],
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "~4"
     },
     "require-dev": {
-        "mockery/mockery": "dev-master"
+        "mockery/mockery": "dev-master",
+        "shopavel/products": "dev-master"
     },
     "autoload": {
         "psr-0": {
