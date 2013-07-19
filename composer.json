@@ -1,0 +1,23 @@
+{
+    "name": "shopavel/orders",
+    "description": "Orders package for Shopavel",
+    "authors": [
+        {
+            "name": "Laurence Roberts",
+            "email": "lsjroberts@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "~4"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Shopavel\\Orders": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
