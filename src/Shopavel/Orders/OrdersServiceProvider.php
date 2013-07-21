@@ -29,9 +29,9 @@ class OrdersServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app['orders'] = $this->app->share(function($app)
+        $this->app['orders.basket'] = $this->app->singleton(function($app)
         {
-            return new OrderManager;
+            return new Basket;
         });
 
         $this->app['orders.processor'] = $this->app->share(function($app)
@@ -47,7 +47,7 @@ class OrdersServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return array('orders', 'orders.processor');
+        return array('orders.basket', 'orders.processor');
     }
 
 }
