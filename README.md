@@ -1,10 +1,31 @@
 Orders package for Shopavel
 ===========================
 
+Configuration
+-------------
+
+### Facade
+
+```php
+    'Basket' => 'Shopavel\Orders\Facades\Basket',
+```
+
+
 Usage
 -----
 
-### Facade
+### Orders
+
+*Relations*
+
+```php
+$customer = $order->customer();
+$products = $order->products();
+```
+
+### Basket
+
+You can use the `Basket` facade to manage the customers active order.
 
 ```php
 $product = Product::find(1);
@@ -21,12 +42,13 @@ Basket::setQuantity($product, 2);
 // Loop all products in the basket
 foreach (Basket::products() as $p)
 {
-    //
+    // ...
 }
 
 // Remove the product from the basket
 Basket::remove($product);
 ```
+
 
 License
 -------
